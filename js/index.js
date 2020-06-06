@@ -45,7 +45,8 @@ var panorama = new google.maps.StreetViewPanorama(document.getElementById('stree
 nearby.addEventListener('click', headingReset)
 //newLocation.addEventListener('click', headingReset)
 
-$("#nearby").on('click', nearSearch);
+nearSearch()
+// $("#nearby").on('click', nearSearch);
 $("#location").on('click', locationReset);
 //$("#autocomplete").on('focus', cityClear);
 $("#headingNew").on('click', starSelect);
@@ -254,7 +255,7 @@ jsonMarkers();
 
 
   //Initial streetview is set to the user's location (if location is allowed)
-  sv.getPanorama({location: pos, radius: 50}, processSVData),
+  // sv.getPanorama({location: pos, radius: 50}, processSVData),
 
  
  map.addListener('click', function(event) {

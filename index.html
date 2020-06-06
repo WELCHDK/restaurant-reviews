@@ -14,8 +14,25 @@
       <link rel="stylesheet" type="text/css" href="css/index.css">
    </head>
    <body>
+      <div class="d-none">
+         <nav class="navbar">
+            <h3 id="pageHead">Chompers Reviews</h3>
+            <p id="subhead">Find Restaurants</p>
+         </nav>
+         <div class="container-fluid px-0">
+            <div class="row no-gutters">
+               <div class="col-md-9">
+                  <div id="map" class="w-100"></div>
+               </div>
+               <div class="col-md-3">
+                  <div class ="newRest" id="newRest"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="d-block">
       <h3 id="pageHead">Chompers Reviews</h3>
-      <p id="subhead">Find Restaurants</p>
+         <p id="subhead">Find Restaurants</p>
       <div id="locationField">
          <button id="nearby" class="main-button" title="Nearby Restaurants">Near
          </button>
@@ -26,8 +43,7 @@
          </div>
       </div>
       <div>
-         <div class="container" id="map">
-         </div>
+         <div id="map" class="w-75"></div>
 
           <div id="modal" class="modal">
       </br>
@@ -57,8 +73,7 @@
                   <option class="star-list" value="2">&bigstar;&bigstar;</option>
                   <option class="star-list" value="1">&bigstar;</option>
                </select>
-               <div class ="newRest" id="newRest">
-               </div>
+               
                <div id="streetview"></div>
                <div class="container3">
                  
@@ -136,7 +151,7 @@
       </div>
       </div>
       
-     
+   </div>
       <script src="js/addReviews.js"> </script>
       <script src="js/addRating.js"> </script>
       <script src="js/reset.js"> </script>

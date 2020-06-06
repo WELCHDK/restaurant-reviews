@@ -109,15 +109,15 @@ table {
 
 
 .container {
-	width: 600px;
-	width: 330px;
-	height: 750px;
-	height: 80vh;
-	margin-left: auto;
+	/* width: 600px; */
+	/* width: 330px; */
+	/* height: 750px; */
+	/* height: 80vh; */
+	/* margin-left: auto; */
 	text-align: center;
 	 background-color: black;
 	color: #00aeef;
-	 padding:2px;
+	 /* padding:2px; */
 }
 
 .container2 {

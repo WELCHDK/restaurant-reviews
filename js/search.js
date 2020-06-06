@@ -17,11 +17,11 @@ var nearby = document.getElementById('nearby');
 
 
 // Search for restaurants in the selected city, within the viewport of the map.
-function search() {
+function search(position) {
   
   var search = {
-    
-    bounds: map.getBounds(),
+    position,
+    // bounds: map.getBounds(),
     types: ['restaurant'],
     radius: 5000
   };
@@ -111,9 +111,22 @@ function nearSearch() {
   $("#modal").css("display", "none");
   $("#headingNew").attr("disabled", false).css('color', "gold");
 
-  places = new google.maps.places.PlacesService(map);
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+      
+      places = new google.maps.places.PlacesService(map);
 
-  // autocomplete.addListener('place_changed', onPlaceChanged);
-  search();
+      // autocomplete.addListener('place_changed', onPlaceChanged);
+      search(pos);
+     
+    })
+  }
+  
+
+  
   
 }
